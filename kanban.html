@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kanban</title>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="app">
+		<div class="lists">
+			<div class="list">
+				<div class="d-flex list-item just">
+					<div class="w-100 non" draggable="true" data-toggle="modal" data-target="#one" id="two">Name</div>
+					<div class="blok" style="display:none;">
+
+						<input type="text" id="three" name="" class="form-control">
+						<button class="btn btn-info butto mt-3 form-control" onclick="myfunc()">Submitt</button>
+					</div>
+
+
+					<i class="press fas fa-pencil ml-5 text-white"></i>
+				</div>
+
+				<div class="d-flex list-item just">
+					<div class="w-100 nond" id="four" draggable="true" data-toggle="modal" data-target="#one">Email</div>
+
+					<div class="kar" style="display:none;">	
+						<input type="text" id="five" name="" class="form-control">
+						<button class="but btn btn-info mt-3 form-control" onclick="onon()">Submitt</button>
+					</div>
+
+					<i class="oay fas fa-pencil ml-5 text-white"></i>
+				</div>
+
+				<div class="d-flex list-item just">
+					<div class="w-100 pass" id="six" draggable="true" data-toggle="modal" data-target="#one">Password</div>
+
+					<div class="disp" style="display:none;">	
+						<input type="text" id="seven" name="" class="form-control">
+						<button class="btn btn-info mt-3 form-control bton" onclick="polar()">Submitt</button>
+					</div>
+
+					<i class="clkp fas fa-pencil ml-5 text-white"></i>
+				</div>
+			</div>
+
+			<div class="list">
+				<div class="list-item" draggable="true" data-toggle="modal" data-target="#one">Example</div>
+				<div class="list-item" draggable="true" data-toggle="modal" data-target="#one">name@gmail.com</div>
+				<div class="list-item" draggable="true" data-toggle="modal" data-target="#one">name@123</div>
+			</div>
+
+			<div class="list">
+				<div class="list-item" draggable="true" data-toggle="modal" data-target="#one">Test</div>
+				<div class="list-item" draggable="true" data-toggle="modal" data-target="#one">test@gmail.com</div>
+				<div class="list-item" draggable="true" data-toggle="modal" data-target="#one">test@123</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="one" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="w-80 ml-custom rome modal-content px-3 py-2 bg-light">
+				<div class="row no-gutters">
+					<div class="col-md-1 text-center">
+						<i class="fas fa-comment-alt-dots float-left mt-1 mr-2 fw-100"></i>
+					</div>
+					<div class="col-md-11">
+						<p>Make it possible for me to knowing the beginning of a subscription, the end of a subscription and have a automatic email send to me let me know</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8">
+						<div class="row">
+							<div class="col-md-1">
+								<i class="fas fa-line-columns fw-100"></i>
+							</div>
+							<div class="col-md-10">
+								<span>Description</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<textarea class="same form-control mt-2 bg-loght" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-md-6">
+								<i class="mr-2 fas fa-bars fw-100"></i>
+								<span>Activity</span>
+							</div>
+							<div class="col-md-6 text-right">
+								<div class="bg-loght rounded py-1 text-center">Hide Details</div>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-md-12 d-flex">
+								<a class="bg-loght px-2 py-1 mr-1 rounded tablet">All</a>
+								<a class="bg-loght px-2 py-1 mr-1 rounded tablet">Comments</a>
+								<a class="bg-loght px-2 py-1 mr-1 rounded tablet">History</a>
+								<a class="bg-loght px-2 py-1 mr-1 rounded tablet">Work Log</a>
+							</div>
+							<div class="col-md-12 d-flex">
+								<a class="bg-loght px-1 mt-2 py-1 mr-1 rounded tablet">Salesforce Comments</a>
+								<a class="bg-loght px-1 mt-2 py-1 mr-1 rounded tablet">Zendesk Support</a>
+							</div>
+						</div>
+						<div id="comments">	
+							<div class="row mt-3 no-gutters">
+								<div class="col-2 px-1">
+									<img src="imgs/download.jfif" class="rounded-circle w-100">
+								</div>
+								<div class="col-10">
+									<input type="text" class="mt-3 same form-control" name="" id="message" requiredr>
+								</div>
+							</div>
+							<div id="thisis">
+								<div class="row mt-2">
+									<div class="col-md-12">
+										<div class="custom mr-2">ZA</div>
+										<div><small class="mr-1"><b>zain_dixeam</b></small><small>move this card higher</small><br><div class="fn-12">Jan 22 at 9:11 pm</div></div>
+									</div>
+								</div>
+								<div class="row mt-2">
+									<div class="col-md-12">
+										<div class="custom mr-2">ZA</div>
+										<div><small class="mr-1"><b>zain_dixeam26</b></small><small>card review by Qaisar</small><br><div class="fn-12">Jan 22 at 9:11 pm</div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="all" style="display:none;">
+							<p class="mt-2">This is dummy text</p>
+						</div>
+						<div id="history" style="display:none;">
+							<p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						</div>
+						<div id="work" style="display:none;">
+							<p class="mt-2">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<div id="salesforce" style="display:none;">
+							<p class="mt-2">This is also dummy text</p>
+						</div>
+						<div id="zendesk" style="display:none;">
+							<p class="mt-2">Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="row mb-2">
+							<div class="col-md-12 d-flex justify-content-between">
+								<span class="fw-600">Suggested</span>
+								<i class="fas fa-cog fw-100 bg-loght p-1 rounded"></i>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-md-12">
+								<div class="bg-loght cli rounded py-1"><i class="fas fa-user mx-2 fw-100"></i>Join</div>
+
+								<div class="para" style="display:none;">
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-user mx-2 fw-100"></i>Join</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-user mx-2 fw-100"></i>Join</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-user mx-2 fw-100"></i>Join</div>
+								</div>
+
+							</div>
+						</div>
+						<span >Add to card</span>
+
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="bg-loght clic rounded py-1"><i class="fas fa-user mx-2 fw-100"></i>Member</div>
+
+								<div class="parag" style="display:none;">
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-user mx-2 fw-100"></i>Member</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-user mx-2 fw-100"></i>Member</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-user mx-2 fw-100"></i>Member</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="bg-loght clicko rounded py-1"><i class="fas fa-tag fa-tag mx-2 fw-100"></i>Labels</div>
+
+								<div class="paragr" style="display:none;">
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-tag fa-tag mx-2 fw-100"></i>Labels</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-tag fa-tag mx-2 fw-100"></i>Labels</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-tag fa-tag mx-2 fw-100"></i>Labels</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="bg-loght clickok rounded py-1"><i class="fas fa-list-alt mx-2 fw-100"></i>Checklist</div>
+
+								<div class="paragro" style="display:none;">
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-list-alt mx-2 fw-100"></i>Checklist</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-list-alt mx-2 fw-100"></i>Checklist</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-list-alt mx-2 fw-100"></i>Checklist</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="bg-loght clickk rounded py-1"><i class="fas fa-clock mx-2 fw-100"></i>Dates</div>
+
+								<div class="paragra" style="display:none;">
+									<!-- <div class="bg-loght rounded py-1 mt-2"><i class="fas fa-clock mx-2 fw-100"></i>Dates</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-clock mx-2 fw-100"></i>Dates</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-clock mx-2 fw-100"></i>Dates</div> -->
+									<input type="date" class="f-10 mt-2 form-control" name="">
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="bg-loght clickkk rounded py-1"><i class="fas fa-paperclip mx-2 fw-100"></i>Attachment</div>
+
+								<div class="paragrag" style="display:none;">
+									<!-- <div class="bg-loght rounded py-1 mt-2"><i class="fas fa-paperclip mx-2 fw-100"></i>Attachment</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-paperclip mx-2 fw-100"></i>Attachment</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-paperclip mx-2 fw-100"></i>Attachment</div> -->
+									<input type="file" class="f-10 form-control mt-2" name="">
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="bg-loght clickkki rounded py-1"><i class="fas fa-blanket mx-2 fw-100"></i>Cover</div>
+
+								<div class="paragragh" style="display:none;">
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-blanket mx-2 fw-100"></i>Cover</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-blanket mx-2 fw-100"></i>Cover</div>
+									<div class="bg-loght rounded py-1 mt-2"><i class="fas fa-blanket mx-2 fw-100"></i>Cover</div>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="bg-loght rounded py-1"><i class="fas fa-comment-alt-lines mx-2 fw-100"></i>Cutom Field</div>
+							</div>
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-md-11">
+								<small>Dropdown,textfields,dates and more to your cards</small>
+							</div>
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="bg-purp rounded py-1 text-purp"><i class="fas fa-container-storage mx-2 fw-100"></i>Member</div>
+							</div>
+						</div>
+
+						<div class="row mt-2">
+							<span class="fw-600 ml-3">Power-Ups</span>
+							<span class="mt-2 ml-3"><i class="fw-100 fas fa-plus mr-1"></i>Add Power-Ups</span>
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-md-12 d-flex justify-content-between">
+								<span class="fw-600">Automation</span>
+								<i class="fas fa-info-circle fw-100 p-1 bg-loght rounded"></i><br>
+							</div>
+							<div class="col-md-12">
+								<div class="mt-2 appe"><i class="fw-100 fas fa-plus mr-1"></i>Add buttons</div>
+							</div>
+						</div>
+
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<span class="fw-600">Action</span>
+
+								<div class="mt-2 bg-loght rounded py-1"><i class="fas fa-arrow-right mx-2 fw-100"></i>Move</div>
+								<div class="mt-2 bg-loght rounded py-1"><i class="fas fa-clone mx-2 fw-100"></i>Copy</div>
+								<div class="mt-2 bg-loght rounded py-1"><i class="fas fa-file-alt mx-2 fw-100"></i>Tempelate</div>
+								<div class="mt-2 bg-loght rounded py-1"><i class="fas fa-eye mx-2 fw-100"></i>Watch</div>
+								<div class="mt-2 bg-loght rounded py-1"><i class="fas fa-folder mx-2 fw-100"></i>Archieve</div>
+								<div class="mt-2 bg-loght rounded py-1"><i class="fas fa-share-alt mx-2 fw-100"></i>Share</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		const list_items=document.querySelectorAll('.list-item');
+		const lists=document.querySelectorAll('.list');
+		let draggedItem=null;
+
+		for (let i = 0; i <list_items.length ; i++) {
+			const item=list_items[i];
+
+			item.addEventListener('dragstart',function(){
+				console.log('dragstart');
+				draggedItem=item;
+				setTimeout(function(){
+					item.style.display='none';
+				},0)
+				// console.log("Hello");
+			});
+
+			item.addEventListener('dragend',function(){
+				console.log('dragend');
+				setTimeout(function (){
+					draggedItem.style.display='block';
+					draggedItem=null;
+				},0)
+			});
+
+			for (let j=0 ; j <lists.length ; j++) {
+				const list=lists[j];
+
+				list.addEventListener('dragover',function(e){
+					e.preventDefault();
+					console.log("Over");
+				});
+
+				list.addEventListener('dragenter',function(e){
+					e.preventDefault();
+					console.log("Enter");
+				});
+
+				list.addEventListener('dragleave',function(e){
+					e.preventDefault();
+					console.log("Leave");
+				});
+
+				list.addEventListener('drop',function(e){
+					console.log("Drop");
+					this.append(draggedItem);
+				});
+
+			}
+		}
+	</script>
+
+	<script type="text/javascript">
+
+		$(".press").on("click",function(){
+
+			$(".blok").css("display","block")
+			$(".non").css("display","none")
+			$(".just").css("justify-content","center")
+
+		});
+		function myfunc(){
+			var b=document.getElementById("three").value;
+
+			document.getElementById("two").innerHTML=b;
+
+
+		}
+		$(".butto").on("click",function(){
+			$(".blok").css("display","none")
+			$(".non").css("display","block")
+			$(".just").css("justify-content","center")
+
+		});
+	</script>
+
+	<script type="text/javascript">
+
+		$(".oay").on("click",function(){
+
+			$(".kar").css("display","block")
+			$(".nond").css("display","none")
+			$(".just").css("justify-content","center")
+
+		});
+		function onon(){
+			var b=document.getElementById("five").value;
+
+			document.getElementById("four").innerHTML=b;
+
+
+		}
+		$(".but").on("click",function(){
+			$(".kar").css("display","none")
+			$(".nond").css("display","block")
+			$(".just").css("justify-content","center")
+
+		});
+	</script>
+
+	<script type="text/javascript">
+
+		$(".clkp").on("click",function(){
+
+			$(".pass").css("display","none")
+			$(".disp").css("display","block")
+			$(".just").css("justify-content","center")
+			$(".just").css("text-align","center")
+
+		});
+		function polar(){
+			var b=document.getElementById("seven").value;
+
+			document.getElementById("six").innerHTML=b;
+
+
+		}
+		$(".bton").on("click",function(){
+			$(".disp").css("display","none")
+			$(".pass").css("display","block")
+			$(".just").css("justify-content","center")
+
+		});
+	</script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".cli").click(function(){
+				$(".para").toggle();
+			});
+		});
+
+		$(document).ready(function(){
+			$(".clic").click(function(){
+				$(".parag").toggle();
+			});
+		});
+
+		$(document).ready(function(){
+			$(".clicko").click(function(){
+				$(".paragr").toggle();
+			});
+		});
+
+		$(document).ready(function(){
+			$(".clickok").click(function(){
+				$(".paragro").toggle();
+			});
+		});
+
+		$(document).ready(function(){
+			$(".clickk").click(function(){
+				$(".paragra").toggle();
+			});
+		});
+
+		$(document).ready(function(){
+			$(".clickkk").click(function(){
+				$(".paragrag").toggle();
+			});
+		});
+
+		$(document).ready(function(){
+			$(".clickkki").click(function(){
+				$(".paragragh").toggle();
+			});
+		});
+		$(document).on("click", ".tablet", function () {
+			var text = $(this).text();
+			console.log(text);
+			if (text.toLowerCase() == "all"){
+				$("#all").show();
+				$("#comments").hide();
+				$("#history").hide();
+				$("#zendesk").hide();
+				$("#salesforce").hide();
+				$("#work").hide();
+			} else if (text.toLowerCase() == "comments"){
+				$("#all").hide();
+				$("#comments").show();
+				$("#history").hide();
+				$("#zendesk").hide();
+				$("#salesforce").hide();
+				$("#work").hide();
+			} else if (text.toLowerCase() == "history"){
+				$("#all").hide();
+				$("#comments").hide();
+				$("#history").show();
+				$("#zendesk").hide();
+				$("#salesforce").hide();
+				$("#work").hide();
+			} else if (text.toLowerCase() == "zendesk support"){
+				$("#all").hide();
+				$("#comments").hide();
+				$("#history").hide();
+				$("#zendesk").show();
+				$("#salesforce").hide();
+				$("#work").hide();
+			} else if (text.toLowerCase() == "salesforce comments"){
+				$("#all").hide();
+				$("#comments").hide();
+				$("#history").hide();
+				$("#zendesk").hide();
+				$("#salesforce").show();
+				$("#work").hide();
+			} else if (text.toLowerCase() == "work log"){
+				$("#all").hide();
+				$("#comments").hide();
+				$("#history").hide();
+				$("#zendesk").hide();
+				$("#salesforce").hide();
+				$("#work").show();
+			}
+		})
+		$("#message").keypress(function (e) {
+			if (e.keyCode == 13) {
+				var text = $(this).val();
+				var data=`<div class="row mt-2">
+				<div class="col-md-12">
+				<div class="custom mr-2">ZA</div>
+				<div><small class="mr-1"><b>zain_dixeam26</b></small><small>`+text+`</small><br><div class="fn-12">Jan 22 at 9:11 pm</div></div>
+				</div>
+				</div>`;
+				$("#thisis").append(data);
+				$("input[type=text], textarea").val("");
+
+			}
+		})
+		$(document).ready(function(){
+			$(".appe").click(function(){
+				// alert("hello");
+				$(".appe").append(`<button type="button" class="btn btn-info mt-1 form-control">Submitt</button>`);
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(function() {
+
+			window.responsive = function responsive() {
+         //get the width of the window
+         var width = $(window).width();
+         console.log (width);
+
+         if (width > 360 && width < 576) {
+                //width is larger than 500px and smaller than 900px
+                $('.rome').removeClass('w-80');
+                $('.rome').removeClass('ml-custom');
+            }
+        }
+
+    });
+  //Call the function on load and resize
+  $(window).on('ready load resize orientationchange',function(){responsive();});
+</script>
+
+</body>
+</html>

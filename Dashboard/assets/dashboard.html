@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:wght@500;600;700&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bd-bt py-0">
+		<a class="navbar-brand d-flex" href="#"><i class="fas fa-bars" id="mbso" onclick="openNav()"></i><i class="far fa-cloud-upload-alt text-primary ml-3 mr-4"></i><div class="f-12">nclouds JIRA</div></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle f-12 text-dark mt-2" href="#"data-toggle="dropdown">
+						Your Work
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Work 1</a>
+						<a class="dropdown-item" href="#">Work 2</a>
+						<a class="dropdown-item" href="#">Work 3</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle f-12 text-dark mt-2" href="#"data-toggle="dropdown">
+						Projects
+					</a>
+					<div class="dropdown-menu">
+						<div class="dropdown-menu-coloums d-flex">
+							<div class="dropdown-menu-column">
+								<a class="dropdown-item" href="#">Project 1</a>
+								<a class="dropdown-item" href="#">Project 2</a>
+								<a class="dropdown-item" href="#">Project 3</a>
+							</div>
+							<div class="dropdown-menu-column">
+								<a class="dropdown-item" href="#">Project 4</a>
+								<a class="dropdown-item" href="#">Project 5</a>
+								<a class="dropdown-item" href="#">Project 6</a>
+							</div>
+							<div class="dropdown-menu-column">
+								<a class="dropdown-item" href="#">Project 7</a>
+								<a class="dropdown-item" href="#">Project 8</a>
+								<a class="dropdown-item" href="#">Project 9</a>
+							</div>
+						</div>
+						
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle f-12 text-dark mt-2" href="#"data-toggle="dropdown">
+						Filters
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Filter 1</a>
+						<a class="dropdown-item" href="#">Filter 2</a>
+						<a class="dropdown-item" href="#">Filter 3</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle f-12 text-dark mt-2" href="#"data-toggle="dropdown">
+						Dashboards
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Dashboard 1</a>
+						<a class="dropdown-item" href="#">Dashboard 2</a>
+						<a class="dropdown-item" href="#">Dashboard 3</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle f-12 text-dark mt-2" href="#"data-toggle="dropdown">
+						People
+					</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">People 1</a>
+						<a class="dropdown-item" href="#">People 2</a>
+						<a class="dropdown-item" href="#">People 3</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"><button class="btn bg-dark text-white">Create</button></a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="same form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			</form>
+			<div class="p-r mt-lg-0 mt-3 d-flex align-items-center">
+				<i class="fas fa-bell rotat"></i>
+				<span class="badge badge-danger sett">9</span>
+				<i class="mx-3 fas fa-question-circle"></i>
+				<i class="fal fa-cog mr-3"></i>
+				<div class="bg-yellow">QS</div>
+			</div>
+		</div>
+	</nav>
+	<div id="mySidenav" class="sidebar bg-light bd-right float-left">
+		<a href="javascript:void(0)" class="float-right mr-4 closebtn text-dark" onclick="closeNav()">&times;</a>
+		<div class="text-muted mt-3 mx-3"><small>MENU</small></div>
+		<ul class="mt-3 mx-3">
+			<li class="mb-2 p-2 active">
+				<a href="dashboard.html"><i class="fas fa-columns mr-3"></i><span>Dashboard</span></a>
+			</li>
+			<li class="mb-2 p-2">
+				<a href="calender.html"><i class="fas fa-calendar-alt mr-3"></i><span>Calender</span></a>
+			</li>
+			<li class="mb-2 p-2">
+				<a href="chat.html"><i class="far fa-comment mr-3"></i><span>Chat</span></a>
+			</li>
+			
+			<li class="mb-2 p-2 ecomop">
+				<i class="fas fa-cash-register mr-3"></i><span>Ecommerce</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class=" sub bg-white rounded ecomcl" style="display: none;">
+				<li class="py-1 pl-5"><a href="product.html">Products</a></li>
+				<li class="py-1 pl-5"><a href="detail.html">Product Detail</a></li>
+				<li class="py-1 pl-5"><a href="order.html">Orders</a></li>
+				<li class="py-1 pl-5"><a href="customer.html">Customers</a></li>
+				<li class="py-1 pl-5"><a href="cart.html">Cart</a></li>
+				<li class="py-1 pl-5"><a href="checout.html">Checout</a></li>
+				<li class="py-1 pl-5"><a href="shop.html">Shops</a></li>
+				<li class="py-1 pl-5"><a href="add-product.html">Add Product</a></li>
+			</ul>
+			<li class="mb-2 p-2 closed">
+				<i class="fas fa-envelope mr-3"></i><span>Email</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class=" sub bg-white rounded opened" style="display: none;">
+				<li class="py-1 pl-5"><a href="inbox.html">Inbox</a></li>
+				<li class="py-1 pl-5"><a href="read.html">Read Email</a></li>
+			</ul>
+			<li class="mb-2 p-2">
+				<i class="fas fa-hashtag mr-3"></i><span><a href="kanban.html">Kanban</a></span>
+			</li>
+			<div class="text-muted mt-3 mx-3"><small>PAGES</small></div>
+
+			<li class="mb-2 p-2 press">
+				<i class="fas fa-user mr-3"></i><span>Authentication</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class=" sub bg-white rounded open" style="display: none;">
+				<li class="py-1 pl-5"><a href="login.html">Login</a></li>
+				<li class="py-1 pl-5"><a href="register.html">Register</a></li>
+				<li class="py-1 pl-5"><a href="recover.html">Recover Password</a></li>
+				<li class="py-1 pl-5"><a href="lock.html">Lock Screen</a></li>
+			</ul>	
+			<li class="mb-2 p-2 utilc">
+				<i class="fas fa-id-card mr-3"></i><span>Utility</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class=" sub bg-white rounded utilo" style="display: none;">
+				<li class="py-1 pl-5"><a href=".html">Starter Page</a></li>
+				<li class="py-1 pl-5"><a href=".html">Maintaiance</a></li>
+				<li class="py-1 pl-5"><a href=".html">Coming Soon</a></li>
+				<li class="py-1 pl-5"><a href=".html">Timeline</a></li>
+				<li class="py-1 pl-5"><a href=".html">FAQs</a></li>
+				<li class="py-1 pl-5"><a href=".html">Pricing</a></li>
+				<li class="py-1 pl-5"><a href=".html">Error 404</a></li>
+				<li class="py-1 pl-5"><a href=".html">Error 500</a></li>
+			</ul>	
+			<div class="text-muted mt-3 mx-3"><small>COMPONENTS</small></div>
+			<li class="mb-2 p-2 elementc">
+				<i class="fad fa-pencil-ruler mr-3"></i><span class="">UI Elements</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class="elemento sub bg-white rounded" style="display: none;">
+				<li class="py-1 pl-5"><a href=".html">Alerts</a></li>
+				<li class="py-1 pl-5"><a href=".html">Buttons</a></li>
+				<li class="py-1 pl-5"><a href=".html">Cards</a></li>
+				<li class="py-1 pl-5"><a href=".html">Carousel</a></li>
+				<li class="py-1 pl-5"><a href=".html">Grid</a></li>
+				<li class="py-1 pl-5"><a href=".html">Images</a></li>
+				<li class="py-1 pl-5"><a href=".html">LightBox</a></li>
+				<li class="py-1 pl-5"><a href=".html">Modals</a></li>
+				<li class="py-1 pl-5"><a href=".html">Range Slider</a></li>
+				<li class="py-1 pl-5"><a href=".html">Round Slider</a></li>
+				<li class="py-1 pl-5"><a href=".html">Session Timeout</a></li>
+				<li class="py-1 pl-5"><a href=".html">Progress Bars</a></li>
+				<li class="py-1 pl-5"><a href=".html">Sweet Alerts</a></li>
+				<li class="py-1 pl-5"><a href=".html">Tabs & Accordian</a></li>
+				<li class="py-1 pl-5"><a href=".html">Typography</a></li>
+				<li class="py-1 pl-5"><a href=".html">Video</a></li>
+				<li class="py-1 pl-5"><a href=".html">General</a></li>
+				<li class="py-1 pl-5"><a href=".html">Rating</a></li>
+				<li class="py-1 pl-5"><a href=".html">Notification</a></li>
+			</ul>
+			<li class="mb-2 p-2 formcl">
+				<i class="fas fa-eraser mr-3"></i><span class="">Forms</span><span class="badge badge-pill badge-danger float-right mt-1">6</span>
+			</li>
+			<ul class="formop sub bg-white rounded" style="display: none;">
+				<li class="py-1 pl-5"><a href=".html">Form Elements</a></li>
+				<li class="py-1 pl-5"><a href=".html">Form Validation</a></li>
+				<li class="py-1 pl-5"><a href=".html">Form Advance Plugin</a></li>
+				<li class="py-1 pl-5"><a href=".html">Form Editor</a></li>
+				<li class="py-1 pl-5"><a href=".html">Form File Upload</a></li>
+				<li class="py-1 pl-5"><a href=".html">Form X-editabe</a></li>
+				<li class="py-1 pl-5"><a href=".html">Form Wizard</a></li>
+				<li class="py-1 pl-5"><a href=".html">Form Mask</a></li>
+			</ul>
+			<li class="mb-2 p-2 hidden">
+				<i class="fas fa-table mr-3"></i><span class="">Tabels</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class="showed sub bg-white rounded" style="display: none;">
+				<li class="py-1 pl-5"><a href="table.html">Basic Table</a></li>
+				<li class="py-1 pl-5"><a href="data.html">Data Table</a></li>
+				<li class="py-1 pl-5"><a href="responsive.html">Responsive Table</a></li>
+				<li class="py-1 pl-5"><a href="edit.html">Editable Table</a></li>
+			</ul>
+			<li class="mb-2 p-2 chartcl">
+				<i class="fas fa-chart-bar mr-3"></i><span class="">Charts</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class="chartop sub bg-white rounded" style="display: none;">
+				<li class="py-1 pl-5"><a href="apex.html">Apex Charts</a></li>
+				<li class="py-1 pl-5"><a href="chartjs.html">Chartjs</a></li>
+				<li class="py-1 pl-5"><a href="">Jquery Knob</a></li>
+				<li class="py-1 pl-5"><a href="">Sparkline</a></li>
+			</ul>
+			<li class="mb-2 p-2 iconcl">
+				<i class="fas fa-paint-brush-alt mr-3"></i><span class="">Icons</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class="iconop sub bg-white rounded" style="display: none;">
+				<li class="py-1 pl-5"><a href=".html">Remix Icons</a></li>
+				<li class="py-1 pl-5"><a href=".html">Material Design</a></li>
+				<li class="py-1 pl-5"><a href=".html">Dripicons</a></li>
+				<li class="py-1 pl-5"><a href=".html">Font awesome 5</a></li>
+			</ul>
+			<li class="mb-2 p-2 ok">
+				<i class="far fa-map-marker-alt mr-3"></i><span class="">Maps</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class="shed sub bg-white rounded" style="display: none;">
+				<li class="py-1 pl-5"><a href="google.html">Google Map</a></li>
+				<li class="py-1 pl-5"><a href="vector.html">Vector Map</a></li>
+			</ul>
+			<li class="mb-2 p-2 multcl">
+				<i class="fas fa-share-alt mr-3"></i><span class="">MultiLevel</span><i class="fas fa-caret-down float-right"></i>
+			</li>
+			<ul class="multop sub bg-white rounded" style="display: none;">
+				<li class="py-1 pl-5"><a href=".html">Level 1.1</a></li>
+				<li class="py-1 pl-5"><a href=".html">Level 1.2</a></li>
+			</ul>
+		</ul>
+	</div>
+	<div class="container-fluid px-0">
+		<div class="row">
+			<div class="col-md-12 bg-grey pb-3 px-3">
+				<div class="row mt-2">
+					<div class="col-md-12 d-flex justify-content-between">
+						<h5 class="text-dark">DASHBOARD</h5>
+						<div>
+							<span>Nazox</span> <i class="far fa-angle-right"></i> <span>Dashboard</span>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-md-8">
+						<div class="row">
+							<div class="col-md-4">
+								<div class=" bg-white rounded px-0 py-3">
+									<div class="d-flex justify-content-between mx-3">
+										<span class="f-14">Number of Sales</span><i class="fad fa-layer-group text-blue"></i>
+									</div>
+									<h4 class="f-1r mx-3 mt-2 mb-3">1452</h4>
+									<hr style="border-top:none;border-bottom:1px solid #EFF2F7 !important;">
+									<div class="mx-3">
+										<span class="badge badge-soft-success font-size-11 me-1"><i class="mdi mdi-menu-up"> </i> 2.4%</span>
+										<span class="text-muted ms-2">From previous period</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4 mt-md-0 mt-3">
+								<div class=" bg-white rounded px-0 py-3">
+									<div class="d-flex justify-content-between mx-3">
+										<span class="f-14">Sales Reveneu</span><i class="fad fa-store text-blue"></i>
+									</div>
+									<h4 class="f-1r mx-3 mt-2 mb-3">$ 38452</h4>
+									<hr style="border-top:none;border-bottom:1px solid #EFF2F7 !important;">
+									<div class="mx-3">
+										<span class="badge badge-soft-success font-size-11 me-1"><i class="mdi mdi-menu-up"> </i> 2.4%</span>
+										<span class="text-muted ms-2">From previous period</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4 mt-md-0 mt-3">
+								<div class="bg-white rounded px-0 py-3">
+									<div class="d-flex justify-content-between mx-3">
+										<span class="f-14">Number of Sales</span><i class="fas fa-briefcase text-blue"></i>
+									</div>
+									<h4 class="f-1r mx-3 mt-2 mb-3">$ 15.4</h4>
+									<hr style="border-top:none;border-bottom:1px solid #EFF2F7 !important;">
+									<div class="mx-3">
+										<span class="badge badge-soft-success font-size-11 me-1"><i class="mdi mdi-menu-up"> </i> 2.4%</span>
+										<span class="text-muted ms-2">From previous period</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-md-12">
+								<div class="bg-white rounded p-3">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident.Excepteur sint occaecat cupidatat non
+									proident.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="bg-white rounded p-3">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</div>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-md-12">
+								<div class="bg-white rounded p-3">
+									<div class="d-flex justify-content-between align-items-center">
+										<span class="text-css">Earnings Reports</span>
+										<i class="far fa-ellipsis-v"></i>
+									</div>
+									<div class="row mt-3">
+										<div class="col-md-6 text-center">
+											<span class="text-muted">Weekly Earnings</span>
+											<h5 class="mt-1">$2,523</h5>
+										</div>
+										<div class="col-md-6 text-center">
+											<span class="text-muted">Monthly Earnings</span>
+											<h5 class="mt-1">$11,235</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-md-4">
+						<div class="bg-white rounded p-3 h-100">
+							<div class="d-flex justify-content-between align-items-center">
+								<span class="text-css">Sources</span>
+								<i class="far fa-ellipsis-v"></i>
+							</div>
+							<div class="text-center">
+								<p class="mb-2 text-2 text-muted">Total sources</p>
+								<h4>$ 7652</h4>
+								<div class="text-success">
+									<i class="mdi mdi-menu-up font-size-14"> </i>2.2 %
+								</div>
+							</div>
+							<div class="d-flex justify-content-between">
+								<span>Source 1</span>
+								<p class="text-muted mb-0">$ 2478</p>
+							</div>
+							<hr>
+							<div class="d-flex justify-content-between">
+								<span>Source 2</span>
+								<p class="text-muted mb-0">$ 2625</p>
+							</div>
+							<hr>
+							<div class="d-flex justify-content-between">
+								<span>Source 3</span>
+								<p class="text-muted mb-0">$ 2856</p>
+							</div>
+							<hr>
+							<div class="d-flex justify-content-between">
+								<span>Source 4</span>
+								<p class="text-muted mb-0">$ 2956</p>
+							</div>
+							<hr>
+							<div class="d-flex justify-content-between">
+								<span>Source 5</span>
+								<p class="text-muted mb-0">$ 2256</p>
+							</div>
+							<hr>
+							<div class="text-center">
+								<button class="btn btn-blue">View More</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 my-md-0 my-4">
+						<div class="rounded bg-white p-3 h-100">
+							<div class="d-flex justify-content-between align-items-center">
+								<span class="text-css">Recently Activity Field</span>
+								<i class="far fa-ellipsis-v"></i>
+							</div>
+							<div class="d-flex mt-4 align-items-center">
+								<div class="mr-2">
+									<i class="fas fa-pencil f-13 text-blue bg-blue p-2 rounded-circle"></i>
+								</div>
+								<div>
+									<h5 class="f-13 mb-0">28 Apr, 2020<small class="text-muted ml-1">12:07 am</small>
+									</h5>
+									<div class="text-muted mb-0 f-14 mt-1">Responded to need “Volunteer Activities”</div>
+								</div>
+							</div>
+							<div class="d-flex mt-4 align-items-center">
+								<div class="mr-2">
+									<i class="fas fa-user f-13 text-blue bg-blue p-2 rounded-circle"></i>
+								</div>
+								<div>
+									<h5 class="f-13 mb-0">21 Apr, 2020<small class="text-muted ml-1">12:07 am</small>
+									</h5>
+									<div class="text-muted mb-0 f-14 mt-1">Added an interest “Volunteer Activities”</div>
+								</div>
+							</div>
+							<div class="d-flex mt-4 align-items-center">
+								<div class="mr-2">
+									<i class="fas fa-signal-alt-3 f-13 text-blue bg-blue p-2 rounded-circle"></i>
+								</div>
+								<div>
+									<h5 class="f-13 mb-0">21 Apr, 2020<small class="text-muted ml-1">12:07 am</small>
+									</h5>
+									<div class="text-muted mb-0 f-14 mt-1">Joined the group “Boardsmanship Forum”</div>
+								</div>
+							</div>
+							<div class="d-flex mt-4 align-items-center">
+								<div class="mr-2">
+									<i class="fas fa-envelope f-13 text-blue bg-blue p-2 rounded-circle"></i>
+								</div>
+								<div>
+									<h5 class="f-13 mb-0">21 Apr, 2020<small class="text-muted ml-1">12:07 am</small>
+									</h5>
+									<div class="text-muted mb-0 f-14 mt-1">Responded to need “In-Kind Opportunity”</div>
+								</div>
+							</div>
+							<div class="d-flex mt-4 align-items-center">
+								<div class="mr-2">
+									<i class="fas fa-calendar-alt f-13 text-blue bg-blue p-2 rounded-circle"></i>
+								</div>
+								<div>
+									<h5 class="f-13 mb-0">21 Apr, 2020<small class="text-muted ml-1">12:07 am</small>
+									</h5>
+									<div class="text-muted mb-0 f-14 mt-1">Created need “Volunteer Activities”</div>
+								</div>
+							</div>
+							<div class="d-flex mt-4 align-items-center">
+								<div class="mr-2">
+									<i class="fad fa-pencil-paintbrush f-13 text-blue bg-blue p-2 rounded-circle"></i>
+								</div>
+								<div>
+									<h5 class="f-13 mb-0">21 Apr, 2020<small class="text-muted ml-1">12:07 am</small>
+									</h5>
+									<div class="text-muted mb-0 f-14 mt-1">Created need “Volunteer Activities”</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="bg-white rounded p-3 h-100">
+							
+						</div>
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-md-4">
+						<div class="bg-white rounded p-3">
+							<div class="d-flex justify-content-between">
+								<div>
+									<h5 class="f-15 mb-1">Frank Vickery</h5><p class="text-muted mb-0"><i class="f-13 fas fa-circle text-success"></i> Active now</p>
+								</div>
+								<div>
+									<i class="text-muted fas fa-search"></i>
+									<i class="text-muted fas fa-cog mx-3"></i>
+									<i class="text-muted fas fa-ellipsis-h"></i>
+								</div>
+							</div>
+							<hr>
+							<div class="edit">
+								<div class="d-flex mt-4 align-items-center">
+									<div class="mr-2">
+										<div class="img-area">
+											<img src="images/sameer.jpg" class="w-100">
+										</div>
+									</div>
+									<div>
+										<h5 class="f-14 text-muted mb-0">Frank Vickery</h5>
+										<div class="text-white bg-ble px-3 py-2 rounded f-14 mt-1">Hey! I am available
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex mt-4 flex-row-reverse align-items-center ">
+									<div class="ml-2">
+										<div class="img-area">
+											<img src="images/sameer.jpg" class="w-100">
+										</div>
+									</div>
+									<div>
+										<h5 class="text-right f-14 text-muted mb-0">Frank Vickery</h5>
+										<div class="text-dark bg-grey px-3 py-2 rounded f-14 mt-1">Hi, How are you? What about our next meeting?
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex mt-4 align-items-center">
+									<div class="mr-2">
+										<div class="img-area">
+											<img src="images/sameer.jpg" class="w-100">
+										</div>
+									</div>
+									<div>
+										<h5 class="f-14 text-muted mb-0">Frank Vickery</h5>
+										<div class="text-white bg-ble px-3 py-2 rounded f-14 mt-1">Hello
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex mt-4 flex-row-reverse align-items-center ">
+									<div class="ml-2">
+										<div class="img-area">
+											<img src="images/sameer.jpg" class="w-100">
+										</div>
+									</div>
+									<div>
+										<h5 class="text-right f-14 text-muted mb-0">Frank Vickery</h5>
+										<div class="text-dark bg-grey px-3 py-2 rounded f-14 mt-1">Hi, How are you? What about our next meeting?
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex mt-4 align-items-center">
+									<div class="mr-2">
+										<div class="img-area">
+											<img src="images/sameer.jpg" class="w-100">
+										</div>
+									</div>
+									<div>
+										<h5 class="f-14 text-muted mb-0">Frank Vickery</h5>
+										<div class="text-white bg-ble px-3 py-2 rounded f-14 mt-1">Yeah everything is fine
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex mt-4 flex-row-reverse align-items-center ">
+									<div class="ml-2">
+										<div class="img-area">
+											<img src="images/sameer.jpg" class="w-100">
+										</div>
+									</div>
+									<div>
+										<h5 class="text-right f-14 text-muted mb-0">Frank Vickery</h5>
+										<div class="text-dark bg-grey px-3 py-2 rounded f-14 mt-1">Wow that's great
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="bg-white rounded p-3">
+							<div class="d-flex justify-content-between align-items-center">
+								<span class="text-css">Latest Transaction</span>
+								<i class="far fa-ellipsis-v"></i>
+							</div>
+							<table width="100%" class="table-bordered mt-4 rounded">
+								<tr>
+									<td class="text-center py-3">(<i class="fal fa-plus"></i>)</td>
+									<td class="text-center px-1"><input type="checkbox" name=""></td>
+									<td class="text-center">No.</td>
+									<td class="text-center">Order ID</td>
+									<td class="text-center">Date</td>
+									<td class="text-center">Billing Name</td>
+									<td class="text-center">Total</td>
+									<td class="text-center">Payment Status</td>
+								</tr>
+								<tr>
+									<td class="text-center py-3">(<i class="fal fa-plus"></i>)</td>
+									<td class="text-center px-1"><input type="checkbox" name=""></td>
+									<td class="text-center">1</td>
+									<td class="text-center">#NZ1572</td>
+									<td class="text-center">04 Apr, 2020</td>
+									<td class="text-center">Walter Brown</td>
+									<td class="text-center">$172</td>
+									<td class="text-center"><span class="badge badge-success">Paid</span></td>
+								</tr>
+								<tr>
+									<td class="text-center py-3">(<i class="fal fa-plus"></i>)</td>
+									<td class="text-center px-1"><input type="checkbox" name=""></td>
+									<td class="text-center">2</td>
+									<td class="text-center">#NZ1586</td>
+									<td class="text-center">06 Apr, 2020</td>
+									<td class="text-center">Jimmy Parker</td>
+									<td class="text-center">$172</td>
+									<td class="text-center"><span class="badge badge-success">Paid</span></td>
+								</tr>
+								<tr>
+									<td class="text-center py-3">(<i class="fal fa-plus"></i>)</td>
+									<td class="text-center px-1"><input type="checkbox" name=""></td>
+									<td class="text-center">3</td>
+									<td class="text-center">#NZ1642</td>
+									<td class="text-center">06 Mar, 2020</td>
+									<td class="text-center">Hannah Baker</td>
+									<td class="text-center">$192</td>
+									<td class="text-center"><span class="badge badge-danger">Unpaid</span></td>
+								</tr>
+
+								<tr>
+									<td class="text-center py-3">(<i class="fal fa-plus"></i>)</td>
+									<td class="text-center px-1"><input type="checkbox" name=""></td>
+									<td class="text-center">4</td>
+									<td class="text-center">#NZ8742</td>
+									<td class="text-center">09 Mar, 2020</td>
+									<td class="text-center">Clay Jenssen</td>
+									<td class="text-center">$198</td>
+									<td class="text-center"><span class="badge badge-success">Paid</span></td>
+								</tr>
+								<tr>
+									<td class="text-center py-3">(<i class="fal fa-plus"></i>)</td>
+									<td class="text-center px-1"><input type="checkbox" name=""></td>
+									<td class="text-center">5</td>
+									<td class="text-center">#NZ8742</td>
+									<td class="text-center">09 Mar, 2020</td>
+									<td class="text-center">Bryce Walker</td>
+									<td class="text-center">$198</td>
+									<td class="text-center"><span class="badge badge-success">Paid</span></td>
+								</tr>
+								<tr>
+									<td class="text-center py-3">(<i class="fal fa-plus"></i>)</td>
+									<td class="text-center px-1"><input type="checkbox" name=""></td>
+									<td class="text-center">5</td>
+									<td class="text-center">#NZ8742</td>
+									<td class="text-center">09 Mar, 2020</td>
+									<td class="text-center">Bryce Walker</td>
+									<td class="text-center">$198</td>
+									<td class="text-center"><span class="badge badge-success">Paid</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".hidden").click(function(){
+				$(".showed").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".press").click(function(){
+				$(".open").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".ok").click(function(){
+				$(".shed").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".closed").click(function(){
+				$(".opened").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".chartcl").click(function(){
+				$(".chartop").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".utilc").click(function(){
+				$(".utilo").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".elementc").click(function(){
+				$(".elemento").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".iconcl").click(function(){
+				$(".iconop").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".multcl").click(function(){
+				$(".multop").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".formcl").click(function(){
+				$(".formop").toggle();
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".ecomop").click(function(){
+				$(".ecomcl").toggle();
+			})
+		});
+	</script>
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("mySidenav").style.marginTop = "0px";
+
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+</body>
+</html>

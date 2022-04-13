@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:wght@500;600;700&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main-box">
+		<div class="box-1">
+			<div class="py-5">
+				<div class="text-center">
+					<img src="images/download.png" class="h-20">
+				</div>
+				<h5 class="f-18 fw-400 mt-3 text-center">Reset Password</h5>
+				<p class="f-14 text-muted text-center">Sign in to continue to Nazox.</p>
+				<div class="text-center img-era my-5 mx-auto">
+					<img src="images/sameer.jpg" class="w-100 h-100">
+				</div>
+				<form class="px-5">
+					<div class="auth-form-group-custom mb-4 w-100 mx-auto">
+						<i class="fas fa-lock-alt auti-custom-input-icon"></i>
+						<label for="username" class="">Password</label>
+						<div class="form-group">
+							<input name="userpassword" placeholder="Enter Password" required="" id="userpassword" type="text" class="form-control is-untouched is-pristine av-valid form-control">
+						</div>
+					</div>
+					<div class="mt-4 text-center">
+						<button type="submit" class="text-white btn-custom border-0 rounded">Unlock</button>
+					</div>
+				</form>
+				<div class="text-center mt-3">
+					
+					<p class="text-muted mt-4">Don't have an account ? <span class="text-blue">Register</span></p>
+					<span class="text-muted"><i class="far fa-copyright"></i>2021 Nazox. <i class="fas fa-heart text-danger"></i> Crafted with  by Themesdesign</span>
+				</div>
+			</div>
+		</div>
+		<div class="box-2 d-md-block d-none">
+			<div class="bg-area">
+				<div class="bg-black">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".hidden").click(function(){
+				$(".showed").toggle();
+			});
+		});
+		$(document).ready(function(){
+			$(".press").click(function(){
+				$(".open").toggle();
+			});
+		});
+	</script>
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("mySidenav").style.marginTop = "0px";
+
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+</body>
+</html>
